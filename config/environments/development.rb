@@ -61,7 +61,17 @@ Rails.application.configure do
 
   # Raises error for missing translations.
   # config.i18n.raise_on_missing_translations = true
-
+  config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
+  config.action_mailer.delivery_method = :smtp
+  config.action_mailer.smtp_settings = {
+    user_name:      'khushirabadiya06@gmail.com',
+    password:       'vspmospoiqnjispc',
+    domain:         'localhost:3000',
+    address:       'smtp.gmail.com',
+    port:          '587',
+    authentication: :plain,
+    enable_starttls_auto: true
+  }
   # Annotate rendered view with file names.
   # config.action_view.annotate_rendered_view_with_filenames = true
 
