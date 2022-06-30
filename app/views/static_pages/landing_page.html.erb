@@ -1,5 +1,6 @@
 <h1>StaticPages#landing_page</h1>
-
+<%= link_to "All users", users_path %>
+<br>
 <% if user_signed_in? %>
     Logged in as <strong><%= current_user.email %></strong>
     <% if can? :account_update, @user %>
